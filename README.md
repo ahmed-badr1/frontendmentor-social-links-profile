@@ -27,8 +27,9 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [View on GitHub](https://github.com/ahmed-badr1/frontendmentor-social-links-profile)
+
+- Live Site URL: [View Live](https://ahmed-badr1.github.io/frontendmentor-social-links-profile/)
 
 ## My process
 
