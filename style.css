@@ -1,0 +1,122 @@
+/* Import Inter font with specific weights using @font-face */
+/* These font-face rules load the Inter typeface locally from the project assets */
+
+@font-face {
+  font-family: "Inter";
+  src: url('/assets/fonts/static/Inter-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url('/assets/fonts/static/Inter-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url('/assets/fonts/static/Inter-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+/* Main Variables */
+:root {
+  --mainColor:hsl(0, 0%, 100%);
+  --secondaryColor: hsl(75, 94%, 57%);
+  --gray-700: hsl(0, 0%, 20%);
+  --gray-800: hsl(0, 0%, 12%);
+  --gray-900: hsl(0, 0%, 8%);
+  --font: "Inter";
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --paragraph-size: 14px;
+}
+
+/* global Styles */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--gray-900);
+  font-family: var(--font), sans-serif;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+a {
+  color: var(--mainColor);
+  text-decoration: none;
+}
+
+/* Main Styles */
+main {
+  min-height: 100vh;
+  padding-block: calc(var(--spacing-md) * 2);
+}
+
+.profile-card {
+  background-color: var(--gray-800);
+  color: var(--mainColor);
+  width: clamp(18rem, 80vw, 21rem);
+  padding: 1.5rem;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: var(--spacing-sm);
+}
+
+img {
+  border-radius: 50%;
+  max-width: 100px;
+  border: 0.01rem solid var(--secondaryColor); 
+}
+
+.person-name {
+  margin-block: 2rem var(--spacing-sm);
+}
+
+.location {
+  color: var(--secondaryColor);
+  margin-block-start: 0;
+  font-size: var(--paragraph-size);
+}
+
+.person-info {
+  font-size: var(--paragraph-size);
+  margin-block-end: 1.2rem;
+}
+
+.social-media-links {
+  width: 100%;
+  text-align: center;
+}
+
+.social-media-links > li:not(:last-child) {
+  margin-block-end: var(--spacing-md);
+}
+
+.social-media-links a {
+  display: block;
+  background-color: var(--gray-700);
+  padding: var(--spacing-md);
+  font-weight: bold;
+  border-radius: var(--spacing-sm);
+  transition: background-color 250ms ease-in, color 250ms ease-in, font-weight 250ms ease-in;
+}
+
+.social-media-links a:hover,
+.social-media-links a:focus-visible {
+  background-color: var(--secondaryColor);
+  color: black;
+  outline: none;
+  font-weight: 600;
+}
